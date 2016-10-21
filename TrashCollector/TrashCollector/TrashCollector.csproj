@@ -215,6 +215,46 @@
     <Compile Include="Migrations\201610201952588_remove customershit.Designer.cs">
       <DependentUpon>201610201952588_remove customershit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610202156341_retry.cs" />
+    <Compile Include="Migrations\201610202156341_retry.Designer.cs">
+      <DependentUpon>201610202156341_retry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610202306045_billing.cs" />
+    <Compile Include="Migrations\201610202306045_billing.Designer.cs">
+      <DependentUpon>201610202306045_billing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610202309514_billing test 2.cs" />
+    <Compile Include="Migrations\201610202309514_billing test 2.Designer.cs">
+      <DependentUpon>201610202309514_billing test 2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610211408559_model builder checks.cs" />
+    <Compile Include="Migrations\201610211408559_model builder checks.Designer.cs">
+      <DependentUpon>201610211408559_model builder checks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610211524358_billing shit.cs" />
+    <Compile Include="Migrations\201610211524358_billing shit.Designer.cs">
+      <DependentUpon>201610211524358_billing shit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610211613383_bullshit.cs" />
+    <Compile Include="Migrations\201610211613383_bullshit.Designer.cs">
+      <DependentUpon>201610211613383_bullshit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610211638025_billing and shipping bullshit.cs" />
+    <Compile Include="Migrations\201610211638025_billing and shipping bullshit.Designer.cs">
+      <DependentUpon>201610211638025_billing and shipping bullshit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610211916218_maybe this will work.cs" />
+    <Compile Include="Migrations\201610211916218_maybe this will work.Designer.cs">
+      <DependentUpon>201610211916218_maybe this will work.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610211944432_fkme.cs" />
+    <Compile Include="Migrations\201610211944432_fkme.Designer.cs">
+      <DependentUpon>201610211944432_fkme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610211950440_geesus.cs" />
+    <Compile Include="Migrations\201610211950440_geesus.Designer.cs">
+      <DependentUpon>201610211950440_geesus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -250,6 +290,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\GoogleMaps.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -348,7 +389,10 @@
     <Content Include="Views\Account\Creates.cshtml" />
     <Content Include="Views\Manage\AddAddress.cshtml" />
     <Content Include="Views\Manage\ChangeAddress.cshtml" />
-    <Content Include="Views\Customers\MyAccount.cshtml" />
+    <Content Include="Views\Home\MyAccount.cshtml" />
+    <Content Include="Views\Customers\Account.cshtml" />
+    <Content Include="Views\Employees\Account.cshtml" />
+    <Content Include="Views\Routes\RouteMap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -376,6 +420,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610201952588_remove customershit.resx">
       <DependentUpon>201610201952588_remove customershit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610202156341_retry.resx">
+      <DependentUpon>201610202156341_retry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610202306045_billing.resx">
+      <DependentUpon>201610202306045_billing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610202309514_billing test 2.resx">
+      <DependentUpon>201610202309514_billing test 2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610211408559_model builder checks.resx">
+      <DependentUpon>201610211408559_model builder checks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610211524358_billing shit.resx">
+      <DependentUpon>201610211524358_billing shit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610211613383_bullshit.resx">
+      <DependentUpon>201610211613383_bullshit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610211638025_billing and shipping bullshit.resx">
+      <DependentUpon>201610211638025_billing and shipping bullshit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610211916218_maybe this will work.resx">
+      <DependentUpon>201610211916218_maybe this will work.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610211944432_fkme.resx">
+      <DependentUpon>201610211944432_fkme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610211950440_geesus.resx">
+      <DependentUpon>201610211950440_geesus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

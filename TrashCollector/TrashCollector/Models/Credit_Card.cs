@@ -23,8 +23,7 @@ namespace TrashCollector.Models
         [Display(Name = "CVC code on back of card: ")]
         public int CVC { get; set; }
 
-        [ForeignKey("BillingAddress")]
-        public int BillingAddressID { get; set; }
-        public BillingAddress BillingAddress { get; set; }
+        //[ForeignKey("BillingAddress")]
+        //public BillingAddress BillingAddress { get; set; }
     }
 }

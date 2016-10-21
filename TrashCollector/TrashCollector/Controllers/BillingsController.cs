@@ -1,12 +1,15 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using TrashCollector.Models;
+using static TrashCollector.Controllers.ManageController;
 
 namespace TrashCollector.Controllers
 {
@@ -34,7 +37,19 @@ namespace TrashCollector.Controllers
             }
             return View(billing);
         }
-
+        //public ActionResult HasCreditCard(int? CreditCardID)
+        //{
+        //    if (CreditCardID == null)
+        //    {
+        //        return View(db.Credit_Card.Create());
+        //    }
+        //    Credit_Card creditCard = db.Credit_Card.Find(CreditCardID);
+        //    if (creditCard == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(creditCard);
+        //}
         // GET: Billings/Create
         public ActionResult Create()
         {

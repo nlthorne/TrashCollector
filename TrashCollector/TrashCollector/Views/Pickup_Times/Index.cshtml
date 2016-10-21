@@ -17,6 +17,18 @@
         <th>
             @Html.DisplayNameFor(model => model.Vacation)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VacationStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VacationEnd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EveryWeek)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EveryOtherWeek)
+        </th>
         <th></th>
     </tr>
 
@@ -27,6 +39,18 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Vacation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VacationStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VacationEnd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EveryWeek)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EveryOtherWeek)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

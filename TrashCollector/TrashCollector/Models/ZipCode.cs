@@ -13,5 +13,6 @@ namespace TrashCollector.Models
         public int ID { get; set; }
         [Display(Name = "Zipcode: ")]
         public int Number { get; set; }
+        public ICollection<Address> ZipCodes { get; internal set; }
     }
 }

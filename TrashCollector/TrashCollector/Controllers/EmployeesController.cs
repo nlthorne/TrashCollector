@@ -19,7 +19,10 @@ namespace TrashCollector.Controllers
         {
             return View(db.Employee.ToList());
         }
-
+        public ActionResult Account()
+        {
+            return View();
+        }
         // GET: Employees/Details/5
         public ActionResult Details(int? id)
         {

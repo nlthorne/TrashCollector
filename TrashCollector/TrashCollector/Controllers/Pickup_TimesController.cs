@@ -19,7 +19,6 @@ namespace TrashCollector.Controllers
         {
             return View(db.Pickup_Times.ToList());
         }
-
         // GET: Pickup_Times/Details/5
         public ActionResult Details(int? id)
         {
