@@ -26,6 +26,8 @@ namespace TrashCollector
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-lumen.css",
                       "~/Content/site.css"));
+            bundles.Add(new ScriptBundle("~/bundles/googlemaps").Include(
+                "~/Scripts/googlemaps.js"));
         }
     }
 }

@@ -10,6 +10,7 @@ using TrashCollector.Models;
 
 namespace TrashCollector.Controllers
 {
+    [Authorize(Roles = "Admin, Customers")]
     public class AddressesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -46,7 +47,7 @@ namespace TrashCollector.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Number,Street_Name,cityID,stateID,zipCodeID,countryID")] Address address)
+        public ActionResult Create([Bind(Include = "ID,Number,Street_Name,City,State,ZipCode,Country,PickupAddress,BillingAddress")] Address address)
         {
             if (ModelState.IsValid)
             {
@@ -55,10 +56,12 @@ namespace TrashCollector.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.cityID = new SelectList(db.City, "ID", "Name", address.CityID);
-            ViewBag.stateID = new SelectList(db.State, "ID", "Name", address.StateID);
-            ViewBag.zipCodeID = new SelectList(db.ZipCode, "ID", "Number", address.ZipCodeID);
-            ViewBag.countryID = new SelectList(db.Country, "ID", "Name", address.CountryID);
+            ViewBag.cityID = new SelectList(db.City, "ID", "Name", address.City);
+            ViewBag.stateID = new SelectList(db.State, "ID", "Name", address.State);
+            ViewBag.zipCodeID = new SelectList(db.ZipCode, "ID", "Number", address.ZipCode);
+            ViewBag.countryID = new SelectList(db.Country, "ID", "Name", address.Country);
+            ViewBag.pickupAddressID = new SelectList(db.PickupAddresses, "ID", "Name", address.PickupAddress);
+            ViewBag.billingAddressID = new SelectList(db.BillingAddresses, "ID", "Name", address.BillingAddress);
             return View(address);
         }
 

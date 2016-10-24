@@ -1,0 +1,21 @@
+﻿@model IEnumerable<TrashCollector.Models.Customer>
+
+@{
+    ViewBag.Title = "Account";
+}
+
+<h2>Index</h2>
+<div class="jumbotron-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Address</h2>
+            <p>Address Information</p>
+            <p><a class="btn btn-default" @Html.ActionLink("View", "Index", "Addresses")</a></p>
+        </div>
+        <div class="col-sm-6">
+            <h2>Personal</h2>
+            <p>Personal Information</p>
+            <p><a class="btn btn-default" @Html.ActionLink("View", "Index", "Customers")</a></p>
+        </div>
+    </div>
+</div>

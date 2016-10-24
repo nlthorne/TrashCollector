@@ -8,7 +8,66 @@
 <div class="jumbotron-fluid">
     <div class="row">
         <div class="col-sm-4">
-            <h2>Billing Information</h2>
+            <h2>Billing Address</h2>
+            <p>
+                @Html.ActionLink("Create New", "Create", "Addresses")
+            </p>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Address.BillingAddress.IsBillingAddress)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Address.BillingAddress.Equals(true))
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", "Addresses", new { id = item.ID }) |
+                            @Html.ActionLink("Details", "Details", "Addresses", new { id = item.ID }) |
+                            @Html.ActionLink("Delete", "Delete", "Addresses", new { id = item.ID })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+
+        <div class="col-sm-4">
+            <h2>Credit Card</h2>
+            <p>
+                @Html.ActionLink("Create New", "Create", "Credit_Card")
+            </p>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CreditCard.Provider)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreditCard)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", "Credit_Card", new { id = item.ID }) |
+                            @Html.ActionLink("Details", "Details", "Credit_Card", new { id = item.ID }) |
+                            @Html.ActionLink("Delete", "Delete", "Credit_Card", new { id = item.ID })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+        <div class="col-sm-4">
+            <h2>Recurring Charge</h2>
             <p>
                 @Html.ActionLink("Create New", "Create")
             </p>
@@ -35,17 +94,6 @@
                 }
 
             </table>
-        </div>
-
-        <div class="col-sm-4">
-            <h2>Billing Information</h2>
-            <p>Update current billing information and check existing bills</p>
-            <p><a class="btn btn-default" @Html.ActionLink("Billing Information", "Index", "Billings")</a></p>
-        </div>
-        <div class="col-sm-4">
-            <h2>Pickup Schedule</h2>
-            <p>Check pickup scheudle, change vacation notice, and more!!</p>
-            <p><a class="btn btn-default" @Html.ActionLink("Pickup Information", "Index", "Pickup_Times")</a></p>
         </div>
     </div>
 </div>

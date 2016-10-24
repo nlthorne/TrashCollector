@@ -21,16 +21,8 @@ namespace TrashCollector.Models
         [Display(Name = "Email Address: ")]
         public string Email { get; set; }
 
-        //[ForeignKey("PickupAddress")]
-        //public int PickupAddressID { get; set; }
-        //public PickupAddress PickupAddress { get; set; }
-
-        //[ForeignKey("PickupTimes")]
-        //public int Pickup_TimesID { get; set; }
-        //public Pickup_Times PickupTimes { get; set; }
-
-        //[ForeignKey("Billing")]
-        //public int BillingID { get; set; }
-        //public Billing Billing { get; set; }
+        //[ForeignKey("Address")]
+        //public int AddressID { get; set; }
+        //public virtual Address Address { get; set; }
     }
 }

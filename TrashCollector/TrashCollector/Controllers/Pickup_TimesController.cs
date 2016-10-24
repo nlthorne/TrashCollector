@@ -10,6 +10,7 @@ using TrashCollector.Models;
 
 namespace TrashCollector.Controllers
 {
+    [Authorize]
     public class Pickup_TimesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -19,7 +20,6 @@ namespace TrashCollector.Controllers
         {
             return View(db.Pickup_Times.ToList());
         }
-
         // GET: Pickup_Times/Details/5
         public ActionResult Details(int? id)
         {

@@ -9,7 +9,8 @@ using System.Web.Mvc;
 using TrashCollector.Models;
 
 namespace TrashCollector.Controllers
-{
+{ 
+    [Authorize(Roles = "Admin, Employee")]
     public class PickupAddressesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

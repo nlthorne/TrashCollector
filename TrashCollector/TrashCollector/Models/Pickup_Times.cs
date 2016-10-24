@@ -15,5 +15,13 @@ namespace TrashCollector.Models
         public DateTime Day { get; set; }
         [Display(Name ="On Vacation")]
         public bool Vacation { get; set; }
+        [Display(Name = "Vacation Start Date: ")]
+        public DateTime VacationStart { get; set; }
+        [Display(Name = "Vacation End Date: ")]
+        public DateTime VacationEnd { get; set; }
+        [Display(Name = "Pickup Every Week?")]
+        public bool EveryWeek { get; set; }
+        [Display(Name = "Pickup Every Other Week?")]
+        public bool EveryOtherWeek { get; set; }
     }
 }

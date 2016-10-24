@@ -10,6 +10,7 @@ using TrashCollector.Models;
 
 namespace TrashCollector.Controllers
 {
+    [Authorize(Roles = "Admin, Employee")]
     public class RoutesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -19,7 +20,10 @@ namespace TrashCollector.Controllers
         {
             return View(db.Route.ToList());
         }
-
+        public ActionResult RouteMap()
+        {
+            return View();
+        }
         // GET: Routes/Details/5
         public ActionResult Details(int? id)
         {

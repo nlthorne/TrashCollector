@@ -12,9 +12,7 @@ namespace TrashCollector.Models
         [Key]
 
         public int ID { get; set; }
-
-        //[ForeignKey("Address")]
-        //public int PickupAddressID { get; set; }
-        //public virtual Address Address { get; set; }
+        [Display(Name = "Pickup Address?")]
+        public bool IsPickupAddress { get; set; }
     }
 }

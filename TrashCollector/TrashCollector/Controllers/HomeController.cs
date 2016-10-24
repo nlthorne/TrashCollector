@@ -16,14 +16,20 @@ namespace TrashCollector.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "My head imploded during this project";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "I don't want you to contact me!!";
+
+            return View();
+        }
+        public ActionResult MyAccount()
+        {
+            ViewBag.Message = "Your account page.";
 
             return View();
         }
