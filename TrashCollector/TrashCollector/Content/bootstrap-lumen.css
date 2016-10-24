@@ -19,6 +19,7 @@ html {
 }
 body {
   margin: 0;
+  background-image: city-background.jpg;
 }
 article,
 aside,
@@ -33,7 +34,7 @@ menu,
 nav,
 section,
 summary {
-  display: block;
+  display: block; text-anchor: bottom;
 }
 audio,
 canvas,
