@@ -19,6 +19,8 @@ namespace TrashCollector.Models
         public bool Recurring { get; set; }
         [Display(Name = "Credit Card: ")]
         public int CreditCardID { get; set; }
+        [Display(Name = "Due Date")]
+        public bool IsBillDue { get; set; }
         public Credit_Card CreditCard { get; set; }
         [Display(Name = "Billing Address: ")]
         public int AddressID { get; set; }
