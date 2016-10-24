@@ -13,6 +13,7 @@ using static TrashCollector.Controllers.ManageController;
 
 namespace TrashCollector.Controllers
 {
+    [Authorize(Roles = "Admin, Customer")]
     public class BillingsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

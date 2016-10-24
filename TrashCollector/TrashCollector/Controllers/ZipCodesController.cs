@@ -10,6 +10,7 @@ using TrashCollector.Models;
 
 namespace TrashCollector.Controllers
 {
+    [Authorize]
     public class ZipCodesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

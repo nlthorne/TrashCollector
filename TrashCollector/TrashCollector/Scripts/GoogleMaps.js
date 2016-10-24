@@ -14,10 +14,7 @@ function Initialize() {
  
     // This makes the div with id "map_canvas" a google map 
     var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions); 
- 
-    // a sample list of JSON encoded data of places to visit in Tunisia 
-    // you can either make up a JSON list server side, or call it from a controller using JSONResult 
-    var data = [ 
+    var data = [
               { "Id": 1, "PlaceName": "Zaghouan", "GeoLong": "36.401081", "GeoLat": "10.16596" }, 
               { "Id": 2, "PlaceName": "Hammamet ", "GeoLong": "36.4", "GeoLat": "10.616667" }, 
               { "Id": 3, "PlaceName": "Sousse", "GeoLong": "35.8329809", "GeoLat": "10.63875" }, 
