@@ -2,25 +2,25 @@
     ViewBag.Title = "MyAccount";
 }
 
-<h2>Index</h2>
+<h1>My Account</h1>
 <div class="jumbotron-fluid">
     <div class="row">
-        <div class="col-sm-3">
+        <div class="col-sm-3 text-center text-vertical-center">
             <h2>Account Information</h2>
             <p>Update user information such as addresses</p>
             <p><a class="btn btn-default" @Html.ActionLink("Account Information", "Account", "Customers")</a></p>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3 text-center text-vertical-center">
             <h2>Billing Information</h2>
             <p>Update current billing information and check existing bills</p>
             <p><a class="btn btn-default" @Html.ActionLink("Billing Information", "Index", "Billings")</a></p>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3 text-center text-vertical-center">
             <h2>Pickup Schedule</h2>
             <p>Check pickup scheudle, change vacation notice, and more!!</p>
             <p><a class="btn btn-default" @Html.ActionLink("Pickup Information", "Index", "Pickup_Times")</a></p>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3 text-center text-vertical-center">
             <h2>Employee</h2>
             <p>Employee Information</p>
             <p><a class="btn btn-default" @Html.ActionLink("Employees", "Account", "Employees")</a></p>
