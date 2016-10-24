@@ -24,6 +24,10 @@ namespace TrashCollector.Controllers
         {
             return View();
         }
+        public ActionResult Map()
+        {
+            return View();
+        }
         // GET: Routes/Details/5
         public ActionResult Details(int? id)
         {

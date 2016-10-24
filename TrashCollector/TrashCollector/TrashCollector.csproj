@@ -255,6 +255,10 @@
     <Compile Include="Migrations\201610211950440_geesus.Designer.cs">
       <DependentUpon>201610211950440_geesus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610241302369_billing1.cs" />
+    <Compile Include="Migrations\201610241302369_billing1.Designer.cs">
+      <DependentUpon>201610241302369_billing1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -276,6 +280,13 @@
     <Compile Include="Models\ZipCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Views\Routes\Map.aspx.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Routes\Map.aspx.designer.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-lumen.css" />
@@ -302,6 +313,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Routes\Map.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -450,6 +462,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610211950440_geesus.resx">
       <DependentUpon>201610211950440_geesus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610241302369_billing1.resx">
+      <DependentUpon>201610241302369_billing1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
