@@ -3,78 +3,67 @@
     ViewBag.Title = "RouteMap";
 }
 
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-<script type="text/javascript">
+        <h2>Route Map</h2>
 
-    var map;
-    function LoadGoogleMAP() {
-        var SetmapOptions = {
-            zoom: 10,
-            center: new google.maps.LatLng(-34.397, 150.644)
-        };
-        map = new google.maps.Map(document.getElementById('canvasMap'),
-  SetmapOptions);
-    }
-
-    google.maps.event.addDomListener(window, 'load', LoadGoogleMAP);
-
-</script>
-
-<h2>Route Map</h2>
-
-<div class="jumbotron-fluid">
-    <div class="row">
-        <table class="table">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Address.Number)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Address.Street_Name)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Address.City.Name)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Address.ZipCode.Number)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Address.PickupAddress.IsPickupAddress)
-                </th>
-            </tr>
-
-            @*@foreach (var item in Model)
-                {
+        <div class="jumbotron-fluid">
+            <div class="row">
+                <table class="table">
                     <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Address.Number)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Address.Street_Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Address.City)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Address.ZipCode)
-                        </td>
-                        <td>
-                            @Html.ActionLink("Edit", "Edit", "Routes", new { id = item.ID }) |
-                            @Html.ActionLink("Details", "Details", "Routes", new { id = item.ID }) |
-                            @Html.ActionLink("Delete", "Delete", "Routes", new { id = item.ID })
-                        </td>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Address.Number)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Address.Street_Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Address.City.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Address.ZipCode.Number)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Address.PickupAddress.IsPickupAddress)
+                        </th>
                     </tr>
-                }*@
 
-        </table>
-    </div>
-</div>
-<div class="jumbotron-fluid">
-    <div id="canvasMap"> </div>
-</div>
+                    @*@foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Address.Number)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Address.Street_Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Address.City)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Address.ZipCode)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", "Routes", new { id = item.ID }) |
+                                    @Html.ActionLink("Details", "Details", "Routes", new { id = item.ID }) |
+                                    @Html.ActionLink("Delete", "Delete", "Routes", new { id = item.ID })
+                                </td>
+                            </tr>
+                        }*@
+
+                </table>
+            </div>
+        </div>
+        <div class="jumbotron-fluid">
+            @{
+                ViewBag.Title = "Route Map";
+            }
+            <h3>Route Map</h3>
+            <br />
+            <iframe src="https://www.google.com/maps/d/embed?mid=1Nai3i99jllUGfUBMPtgsX2NzUE8" width="640" height="480"></iframe>
+            </div> 
+        </div>
