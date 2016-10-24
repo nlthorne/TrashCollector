@@ -21,6 +21,8 @@ namespace TrashCollector.Models
         public int CreditCardID { get; set; }
         [Display(Name = "Due Date")]
         public bool IsBillDue { get; set; }
+        [Display(Name = "Next Due Date")]
+        public DateTime DueDate { get; set; }
         public Credit_Card CreditCard { get; set; }
         [Display(Name = "Billing Address: ")]
         public int AddressID { get; set; }

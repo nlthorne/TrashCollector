@@ -15,12 +15,12 @@ namespace TrashCollector.Models
         [Display(Name = "Route Name: ")]
         public string Name { get; set; }
 
-        [ForeignKey("PickupTimes")]
-        public int Pickup_TimesID { get; set; }
-        public Pickup_Times PickupTimes { get; set; }
+        //[ForeignKey("PickupTimes")]
+        //public int Pickup_TimesID { get; set; }
+        //public Pickup_Times PickupTimes { get; set; }
 
-        [ForeignKey("Address")]
-        public int Pickup_AddressID { get; set; }
-        public Address Address { get; set; }
+        //[ForeignKey("Address")]
+        //public int Pickup_AddressID { get;}
+        //public Address Address { get; }
     }
 }

@@ -50,11 +50,12 @@ namespace TrashCollector.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,First_Name,Last_Name,routeID")] Employee employee)
+        public ActionResult Create([Bind(Include = "ID,First_Name,Last_Name")] Employee employee, Route route)
         {
             if (ModelState.IsValid)
             {
                 db.Employee.Add(employee);
+                db.Route.Add(route);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

@@ -10,7 +10,7 @@ using TrashCollector.Models;
 
 namespace TrashCollector.Controllers
 {
-    [Authorize(Roles = "Admin, Customers")]
+    [Authorize(Roles = "Admin, Customer")]
     public class AddressesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -47,11 +47,12 @@ namespace TrashCollector.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Number,Street_Name,City,State,ZipCode,Country,PickupAddress,BillingAddress")] Address address)
+        public ActionResult Create([Bind(Include = "ID,Number,Street_Name,City,State,ZipCode,Country,PickupAddress,BillingAddress")] Address address, PickupAddress pickupAddress)
         {
             if (ModelState.IsValid)
             {
                 db.Address.Add(address);
+                db.PickupAddresses.Add(pickupAddress);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -85,7 +86,7 @@ namespace TrashCollector.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Number,Street_Name,cityID,stateID,zipCodeID,countryID")] Address address)
+        public ActionResult Edit([Bind(Include = "ID,Number,Street_Name,cityID,stateID,zipCodeID,countryID,shippingAddressID, billingAddressID")] Address address)
         {
             if (ModelState.IsValid)
             {

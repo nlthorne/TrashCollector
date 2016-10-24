@@ -18,7 +18,7 @@ namespace TrashCollector.Controllers
         // GET: Routes
         public ActionResult Index()
         {
-            return View(db.Route.ToList());
+            return ViewBag(db.Address.ToList());
         }
         public ActionResult RouteMap()
         {
@@ -86,7 +86,7 @@ namespace TrashCollector.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,zipCodeID,pickup_TimesID,addressID")] Route route)
+        public ActionResult Edit([Bind(Include = "ID,Name,zipCodeID,pickup_TimesID")] Route route)
         {
             if (ModelState.IsValid)
             {

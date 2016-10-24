@@ -10,7 +10,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Pickup_Times</h4>
         <hr />
@@ -26,6 +26,26 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.EveryWeek, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.EveryWeek)
+                    @Html.ValidationMessageFor(model => model.EveryWeek, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EveryOtherWeek, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.EveryOtherWeek)
+                    @Html.ValidationMessageFor(model => model.EveryOtherWeek, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
             @Html.LabelFor(model => model.Vacation, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
@@ -35,6 +55,25 @@
             </div>
         </div>
 
+        <div class="form-group">
+            @Html.LabelFor(model => model.VacationStart, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.VacationStart)
+                    @Html.ValidationMessageFor(model => model.VacationStart, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VacationEnd, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.VacationEnd)
+                    @Html.ValidationMessageFor(model => model.VacationEnd, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-default" />
